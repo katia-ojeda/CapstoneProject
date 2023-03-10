@@ -1,10 +1,14 @@
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     <p>homepage</p>
-    </div>
+    <React.Fragment>
+     <Header/>
+      <Nav/>
+      <Main/>
+      <Footer/>
+    </React.Fragment>
   );
 }
 
