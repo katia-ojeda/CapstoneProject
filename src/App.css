@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+nav{
+  background-color: white;
+}
+
+nav ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+main{
+  background-color:#495E57;
+}
+
+footer{
+  background-color: white;
+  color: #495E57;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer p{
+  font-weight: 700;
+}
+
+footer ul{
+  list-style-type: none;
+  padding: 0;
+}

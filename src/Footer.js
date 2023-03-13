@@ -1,7 +1,13 @@
+import React from 'react';
+import './App.css';
+
 function Footer() {
     return (
         <footer>
-            <div>
+            <div id="foot0">
+                <img src='LittleLemonLogo.jpg' alt='logo'/>
+            </div>
+            <div id="foot1">
                 <p>Doormat Navigation</p>
                 <ul>
                     <li>Home</li>
@@ -12,7 +18,7 @@ function Footer() {
                     <li>Login</li>
                 </ul>
             </div>
-            <div>
+            <div id="foot2">
                 <p>Contact</p>
                 <ul>
                     <li>Address</li>
@@ -20,7 +26,7 @@ function Footer() {
                     <li>Email</li>
                 </ul>
             </div>
-            <div>
+            <div id="foot3">
                 <p>Social Media Links</p>
                 <ul>
                     <li>Instagram</li>
@@ -30,3 +36,5 @@ function Footer() {
         </footer>
     );
   }
+
+  export default Footer;
