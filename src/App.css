@@ -37,8 +37,62 @@
   }
 }
 
+h1{
+  color: #F4C314;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 28pt;
+  font-weight: 100;
+  margin: 0;
+}
+
+h2{
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 25pt;
+  margin: 0;
+}
+
+h3{
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22pt;
+  font-weight: 100;
+  margin: 0;
+}
+
+h4{
+  color: #F4C314;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 19pt;
+  font-weight: 100;
+  margin: 0;
+}
+
+p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 11pt;
+}
+
+button{
+  background-color: #F4C314;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  border-radius: 8pt;
+  border-width: 1px;
+  border-color: #F4C314;
+  padding: 7pt 2%;
+}
+
+.order{
+  background: none;
+  border: 0;
+  font-weight:bold;
+}
+
 nav{
   background-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 nav ul{
@@ -46,6 +100,7 @@ nav ul{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 nav a{
@@ -54,9 +109,28 @@ nav a{
   font-weight: 600;
 }
 
-main{
-  background-color:#495E57;
+.greenstyle{
+  background-color: #495E57;
 }
+
+section{
+  padding: 3% 10%;
+  display: flex;
+  justify-content: center;
+}
+
+#intro{
+  display: flex;
+}
+
+#intro p{
+  color: white;
+}
+
+#testimonials{
+  background-color: #FBDABB;
+}
+
 
 footer{
   background-color: white;
@@ -66,10 +140,13 @@ footer{
 }
 
 footer p{
+  font-size: 12pt;
   font-weight: 700;
+  margin: 0;
 }
 
 footer ul{
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
