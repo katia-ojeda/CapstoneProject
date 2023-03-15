@@ -1,8 +1,10 @@
 import React from 'react';
+import logo from "./LittleLemonLogo.jpg";
 
 function Nav() {
     return (
         <nav>
+            <img src={logo} alt="logo"/>
             <ul>
                 <li><a href="/public/index.html">Home</a></li>
                 <li><a href="/public/index.html">About</a></li>

@@ -40,7 +40,7 @@
 h1{
   color: #F4C314;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 28pt;
+  font-size: 51pt;
   font-weight: 100;
   margin: 0;
 }
@@ -48,14 +48,14 @@ h1{
 h2{
   color: black;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 25pt;
+  font-size: 48pt;
   margin: 0;
 }
 
 h3{
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 22pt;
+  font-size: 32pt;
   font-weight: 100;
   margin: 0;
 }
@@ -68,19 +68,29 @@ h4{
   margin: 0;
 }
 
+h6{
+  color:black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 17pt;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
 p{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 11pt;
+  font-size: 16pt;
 }
 
 button{
   background-color: #F4C314;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14pt;
   color: black;
   border-radius: 8pt;
   border-width: 1px;
   border-color: #F4C314;
-  padding: 7pt 2%;
+  padding: 1rem 3%;
+  margin: 2rem 0;
 }
 
 .order{
@@ -91,16 +101,21 @@ button{
 
 nav{
   background-color: white;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding: 1% 10%;
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 16pt;
 }
 
 nav ul{
   list-style-type: none;
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
+  flex-grow: 2;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 nav a{
@@ -113,30 +128,161 @@ nav a{
   background-color: #495E57;
 }
 
+img{
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8pt;
+}
+
 section{
-  padding: 3% 10%;
+  padding: 5rem 10%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #intro{
   display: flex;
+  flex-direction: row;
+}
+
+#intro .text{
+  width: 800px;
 }
 
 #intro p{
   color: white;
 }
 
-#testimonials{
-  background-color: #FBDABB;
+#intro img{
+  height:auto;
+  width: 100%;
+  margin-top: 2rem;
 }
 
+#specials{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#tittle{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+section .items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2%;
+}
+
+article.dish{
+  background-color: #EDEFEE;
+  width: 30%;
+  min-width: 300px;
+  margin: 2rem 0;
+}
+
+article > img{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+div.itemprice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0rem 1rem;
+}
+
+.price{
+  color: #EE9972;
+  font-weight: 600;
+  margin: 0;
+}
+
+.description{
+  padding: 0rem 1rem;
+  font-size: 12pt;
+  height: 100px
+}
+
+button.order{
+  margin: 1rem;
+  padding: 0;
+}
+
+#testimonials{
+  display: flex;
+  flex-direction: column;
+  background-color: #FBDABB;
+  padding-bottom: 0rem;
+}
+
+.title{
+  text-align: center;
+  padding-bottom: 5rem;
+  width: 100%;
+}
+
+.title h2{
+  font-size: 200%;
+}
+
+article.review{
+  padding: 0 1rem;
+  margin: 2rem 0;
+  background-color: white;
+  height: min-content;
+}
+
+div.user{
+  display: flex;
+  flex-direction: row;
+  gap:0.5rem ;
+}
+
+.user > img{
+  border-radius: 0;
+  width: 80px;
+  height: 80px;
+}
+
+#about{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#about .text{
+  width: 600px;
+  color: white;
+}
+
+.pictures{
+  display: flex;
+  flex-direction: column;
+}
+
+.pictures img{
+  margin: 0.5rem 0;
+}
 
 footer{
   background-color: white;
   color: #495E57;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
 footer p{
