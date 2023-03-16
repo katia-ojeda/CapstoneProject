@@ -1,19 +1,22 @@
 import React from 'react';
 import logo from "./LittleLemonLogo.jpg";
+import {Link} from 'react-router-dom';
 
 function Nav() {
     return (
-        <nav>
-            <img src={logo} alt="logo"/>
+        <div className='nav'>
+            <nav>
+            <img src={logo} alt="logo" />
             <ul>
-                <li><a href="/public/index.html">Home</a></li>
-                <li><a href="/public/index.html">About</a></li>
-                <li><a href="/public/index.html">Menu</a></li>
-                <li><a href="/public/index.html">Reservations</a></li>
-                <li><a href="/public/index.html">Order Online</a></li>
-                <li><a href="/public/index.html">Login</a></li>
+                <li><Link to="/">Home</Link></li>
+                <li>About</li>
+                <li>Menu</li>
+                <li><Link to="/BookingPage">Reservations</Link></li>
+                <li>Order Online</li>
+                <li>Login</li>
             </ul>
-        </nav>
+            </nav>
+        </div>
     );
   }
 

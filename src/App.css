@@ -186,6 +186,7 @@ article.dish{
   background-color: #EDEFEE;
   width: 30%;
   min-width: 300px;
+  max-width: 400px;
   margin: 2rem 0;
 }
 
