@@ -1,5 +1,3 @@
-
-
 function ConfirmedBooking(){
     return(
         <div>

@@ -4,10 +4,12 @@ import './App.css';
 const BookingForm=({availableTimes,
     dispatchOnDateChange, submitForm})=> {
 
+    const minDate = new Date().toISOString().split('T')[0];
     const [date, setDate] = useState("");
     const [guests, setGuests] = useState("");
     const [time, setTime] = useState("");
     const [occasion, setOccasion] = useState("");
+    const [email, setEmail] = useState("");
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -30,6 +32,13 @@ const BookingForm=({availableTimes,
         <option key={hour.toString()}>{hour}</option>
     );
 
+    const validateDate = () => date !== '';
+    const validateTime = () => time !== '';
+    const validateGuests = () => guests !== '';
+
+    const validateFields=()=>
+        validateDate() && validateTime && validateGuests;
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
@@ -38,6 +47,8 @@ const BookingForm=({availableTimes,
                     type="date"
                     id="res-date"
                     name="date"
+                    min={minDate}
+                    required
                     value={date}
                     onChange ={handleDate}
                 />
@@ -45,6 +56,7 @@ const BookingForm=({availableTimes,
                 <select
                     id="res-time"
                     name="time"
+                    required
                     value={time}
                     onChange={(e)=> setTime(e.target.value)}
                 >
@@ -58,6 +70,7 @@ const BookingForm=({availableTimes,
                     max="10"
                     id="guests"
                     name="guests"
+                    required
                     value={guests}
                     onChange={(e)=> setGuests(e.target.value)}
                 />
@@ -70,10 +83,21 @@ const BookingForm=({availableTimes,
                         <option>Birthday</option>
                         <option>Anniversary</option>
                 </select>
+                <label htmlFor="email">E-mail</label>
                 <input
-                    type="submit"
-                    value="Make Your reservation"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={email}
+                    onChange={(e)=> setEmail(e.target.value)}
                 />
+                <button
+                    type="submit"
+                    disabled={!validateFields()}
+                >
+                    Make Your reservation
+                </button>
             </form>
         </div>
     );
