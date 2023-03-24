@@ -1,43 +1,37 @@
-import React from 'react';
-import './App.css';
+import { useReducer } from "react";
+import { useNavigate } from 'react-router-dom';
+// import { useState } from "react";
+import BookingForm from "./BookingForm";
+import {fetchAPI, submitAPI} from "./fakeAPI";
 
-//pictures
-import logo from "./LittleLemonLogo.jpg";
+const updateTimes = (availableTimes, date) => {
+    const response = fetchAPI(new Date(date));
+    return (response.length !== 0) ? response : availableTimes;
+  };
 
-function BookingPage() {
-    return (
-        <footer>
-            <div id="foot0">
-                <img src={logo} alt='logo'/>
-            </div>
-            <div id="foot1">
-                <p>Doormat Navigation</p>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Menu</li>
-                    <li>Reservations</li>
-                    <li>Order Online</li>
-                    <li>Login</li>
-                </ul>
-            </div>
-            <div id="foot2">
-                <p>Contact</p>
-                <ul>
-                    <li>Address</li>
-                    <li>Phone Number</li>
-                    <li>Email</li>
-                </ul>
-            </div>
-            <div id="foot3">
-                <p>Social Media Links</p>
-                <ul>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                </ul>
-            </div>
-        </footer>
+const initializeTimes = initialAvailableTimes =>
+    [...initialAvailableTimes, ...fetchAPI(new Date())];
+
+const BookingPage =() => {
+
+    const [
+        availableTimes,
+        dispatchOnDateChange
+    ] = useReducer(updateTimes, [], initializeTimes);
+    const navigate = useNavigate();
+
+    const submitForm = formData => {
+        const response = submitAPI(formData);
+        if (response) navigate('/ConfirmedBooking');
+      };
+
+    return(
+        <BookingForm
+            availableTimes={availableTimes}
+            dispatchOnDateChange={dispatchOnDateChange}
+            submitForm={submitForm}
+        />
     );
-  }
+}
 
-  export default BookingPage;
+export default BookingPage;
