@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 //pictures
 import restaurantFood from "./restauranfood.jpg";
@@ -17,7 +18,7 @@ function Main() {
                     <h1>Little Lemon</h1>
                     <h3>Chicago</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button>Reserve a Table</button>
+                    <button><Link to="/BookingPage">Reserve a Table</Link></button>
                 </div>
                 <img src={restaurantFood} alt='restaurant' className="round"/>
             </section>

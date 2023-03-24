@@ -33,11 +33,11 @@ const BookingForm=({availableTimes,
     );
 
     const validateDate = () => date !== '';
-    const validateTime = () => time !== '';
     const validateGuests = () => guests !== '';
+    const validateEmail = () => email !== '';
 
     const validateFields=()=>
-        validateDate() && validateTime && validateGuests;
+        validateDate() && validateGuests() && validateEmail();
 
     return (
         <div className='ReserveForm'>
@@ -59,6 +59,7 @@ const BookingForm=({availableTimes,
                     className='formInput'
                     id="res-time"
                     name="time"
+                    placeholder=""
                     required
                     value={time}
                     onChange={(e)=> setTime(e.target.value)}
