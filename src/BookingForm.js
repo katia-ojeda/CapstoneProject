@@ -40,10 +40,12 @@ const BookingForm=({availableTimes,
         validateDate() && validateTime && validateGuests;
 
     return (
-        <div>
+        <div className='ReserveForm'>
+            <h1>Reserve a table</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="res-date">Choose date</label>
                 <input
+                    className='formInput'
                     type="date"
                     id="res-date"
                     name="date"
@@ -54,6 +56,7 @@ const BookingForm=({availableTimes,
                 />
                 <label htmlFor="res-time">Choose time</label>
                 <select
+                    className='formInput'
                     id="res-time"
                     name="time"
                     required
@@ -64,6 +67,7 @@ const BookingForm=({availableTimes,
                 </select>
                 <label htmlFor="guests">Number of guests</label>
                 <input
+                    className='formInput'
                     type="number"
                     placeholder="1"
                     min="1"
@@ -76,6 +80,7 @@ const BookingForm=({availableTimes,
                 />
                 <label htmlFor="occasion">Occasion</label>
                 <select
+                    className='formInput'
                     id="occasion"
                     name="occasion"
                     value={occasion}
@@ -85,6 +90,7 @@ const BookingForm=({availableTimes,
                 </select>
                 <label htmlFor="email">E-mail</label>
                 <input
+                    className='formInput'
                     type="email"
                     id="email"
                     name="email"
@@ -93,6 +99,7 @@ const BookingForm=({availableTimes,
                     onChange={(e)=> setEmail(e.target.value)}
                 />
                 <button
+                    className='submitButton'
                     type="submit"
                     disabled={!validateFields()}
                 >

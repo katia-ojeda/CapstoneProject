@@ -93,6 +93,12 @@ button{
   margin: 2rem 0;
 }
 
+button:disabled{
+  background-color: #EDEFEE;
+  border: #EDEFEE;
+  color: gray;
+}
+
 .order{
   background: none;
   border: 0;
@@ -296,4 +302,48 @@ footer ul{
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+/* BookingForm */
+.ReserveForm{
+  padding: 5rem 10%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  background-color: #495E57;
+  color: white;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form label{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 17pt;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+form .formInput{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+  width: 50%;
+  min-width: 19rem;
+  padding: 1rem 0.5rem;
+  border-radius: 8pt;
+  border-width: 1px;
+  border-color: white;
+}
+
+.submitButton {
+  width: 50%;
+}
+
+/*ConfirmedBooking*/
+.confirmation{
+  padding: 5rem 10%;
+  background-color: #495E57;
+  color: white;
 }

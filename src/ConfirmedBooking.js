@@ -1,7 +1,7 @@
 function ConfirmedBooking(){
     return(
-        <div>
-            <p>Booking has been confirmed</p>
+        <div className="confirmation">
+            <p>Your booking has been confirmed</p>
         </div>
     )
 }
